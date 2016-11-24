@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './App.css';
-import posts from './data.json';
 
-console.log(posts);
 
 class App extends Component {
   render() {
+    const {posts} = this.props;
     return <div className="wall">
       {posts.map((post, i) => {
         return <div key={i} className="post">
@@ -19,4 +19,6 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(store => ({
+  posts: store
+}))(App);
