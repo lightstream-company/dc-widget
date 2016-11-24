@@ -21,7 +21,6 @@ load('wall/', {
 
 connect('wall', post => store.dispatch(postReceived(post)));
 
-
 ReactDOM.render(
   <Provider store={store}>
     <App />
