@@ -13,6 +13,8 @@ body {
 
 .post {
 	padding: 1em;
+	clear: both;
+	overflow: hidden;
 }
 
 .wall {
@@ -40,7 +42,7 @@ body {
 
 .post p {
 	font-weight: 300;
-	margin-left: 4em;
+	margin: 0.5em 0 0 4em;
 }
 
 .post em {
@@ -60,4 +62,21 @@ body {
 	border-radius: 4px;
 	margin-right: 1em;
 	width: 48px;
+}
+
+@media screen and (max-width: 768px) {
+	.wall {
+		border: none;
+		margin: 0;
+	}
+	
+	.post p {
+		margin: 1.5em 0 0 ;
+	}
+	
+	.post em {
+		float: none;
+		display: block;
+		margin-top: 0.5em;
+	}
 }
