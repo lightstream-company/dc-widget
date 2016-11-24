@@ -11,8 +11,8 @@ class App extends Component {
         return <div key={i} className="post">
           <img src={post.user.profile_picture} alt="" />
           <h2>@{post.user.name}</h2>
-          <p>{post.text}</p>
           <em>from {post._source}</em>
+          <p>{post.text}</p>
         </div>;
       })}
     </div>;

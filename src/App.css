@@ -5,3 +5,59 @@
 .wall .post{
   border-bottom: 1px solid #ccc;
 }
+
+body {
+	font-family: 'Raleway';
+	background: #eee;
+}
+
+.post {
+	padding: 1em;
+}
+
+.wall {
+	max-width: 768px;
+	margin: 1em auto;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	padding: 0;
+	background: #fff;
+}
+
+.post:hover {
+	background: rgba(110, 202, 217, 0.25);
+	-webkit-transition: background 1s;
+	transition: background 1s;
+}
+
+.post h2 {
+	font-weight: 700;
+	font-size: 18px;
+	margin: 0;
+	width: auto;
+	display: inline;
+}
+
+.post p {
+	font-weight: 300;
+	margin-left: 4em;
+}
+
+.post em {
+	font-weight: 500;
+	font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    float: right;
+    color: #666;
+    top: 0;
+}
+
+.post img {
+	float: left;
+	clear: none;
+	border-radius: 4px;
+	margin-right: 1em;
+	width: 48px;
+}
