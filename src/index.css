@@ -5,38 +5,3 @@ body {
   background: #eee;
 }
 
-.post {
-	padding: 1em 1em;
-}
-
-.wall {
-	max-width: 768px;
-	margin: 1em auto;
-	border: 1px solid #ccc;
-	border-bottom: none;
-	padding: 0;
-	background: #fff;
-}
-
-.post:hover {
-	background: rgba(110, 202, 217, 0.25);
-	-webkit-transition: background 1s;
-	transition: background 1s;
-}
-
-.post h2 {
-	font-weight: 700;
-	margin: 0;
-}
-
-.post p {
-	font-weight: 300;
-}
-
-.post em {
-	font-weight: 500;
-	font-style: normal;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 12px;   
-}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Post from './Post';
 import './App.css';
 
 
@@ -7,14 +8,7 @@ class App extends Component {
   render() {
     const {posts} = this.props;
     return <div className="wall">
-      {posts.map((post, i) => {
-        return <div key={i} className="post">
-          <img src={post.user.profile_picture} alt="" />
-          <h2>@{post.user.name}</h2>
-          <p>{post.text}</p>
-          <em>from {post._source}</em>
-        </div>;
-      })}
+      {posts.map((post, i) => <Post key={i} index={i} size={posts.length} {...post} />)}
     </div>;
   }
 }

@@ -1,0 +1,33 @@
+.post{
+  position: absolute;
+  width: 0;
+}
+
+.post .content{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  height: 40px; 
+  margin-top: -20px;
+}
+
+.post .content h2{
+  font-size: 14px;
+  text-decoration: underline;
+  margin: 0;
+  padding: 0;
+}
+.post .content p{
+  margin: 0;
+  padding: 0;
+  width: 400px;
+  font-size: 11px;
+}
+
+.post .content .line{
+  border-top: 1px dashed #000;
+  width: 1000px;
+  position: absolute;
+  top: 14px;
+  opacity: 0.7;
+}

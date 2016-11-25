@@ -1,7 +1,11 @@
-.wall{
-  padding: 10px;
+html, body{
+  height: 100%;
 }
 
-.wall .post{
-  border-bottom: 1px solid #ccc;
+.wall{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1px solid rgba(0,0,0,0.2);
+  font-family: monospace;
 }
