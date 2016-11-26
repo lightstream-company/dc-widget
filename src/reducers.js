@@ -6,6 +6,6 @@ export default handleActions({
     return action.payload;
   },
   [POST_RECEIVED]: (state, action) => {
-    return [...state.slice(1, state.length), action.payload];
+    return [action.payload, ...state.slice(0, state.length - 1)];
   }
 }, []);

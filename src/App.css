@@ -1,11 +1,47 @@
-html, body{
-  height: 100%;
+@keyframes fullCycle {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
 }
 
 .wall{
   position: absolute;
   left: 50%;
   top: 50%;
-  border: 1px solid rgba(0,0,0,0.2);
   font-family: monospace;
+  animation: fullCycle 50s infinite;
+  animation-timing-function: linear;
+}
+
+.wall .mask{
+  position: absolute;
+  z-index: 30;
+  top: -40px;
+  left: -40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  background-image: radial-gradient(rgba(0,0,0,0.9) 10%, rgba(0,0,0,0) 100%);
+}
+
+.wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s;
+  background-size: cover;
+  opacity: 0.15;
 }
