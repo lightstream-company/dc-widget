@@ -17,6 +17,7 @@ class App extends Component {
     }
     return <div className="wrapper">
       <div className="bg" style={style}></div>
+      <div className="mask"></div>
       <div className="wall">
         {posts.map((post, i) => <Post key={post._id} index={i} size={posts.length} {...post} />)}
       </div>

@@ -3,7 +3,7 @@
     transform: rotate(0deg);
   }
   100%{
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 
@@ -16,15 +16,14 @@
   animation-timing-function: linear;
 }
 
-.wall .mask{
+.mask{
   position: absolute;
-  z-index: 30;
-  top: -40px;
-  left: -40px;
-  width: 80px;
-  height: 80px;
-  border-radius: 80px;
-  background-image: radial-gradient(rgba(0,0,0,0.9) 10%, rgba(0,0,0,0) 100%);
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-image: radial-gradient(rgba(0,0,0,0.7) 10%, rgba(0,0,0,0.95) 90%);
 }
 
 .wrapper{
@@ -43,5 +42,4 @@
   height: 100%;
   transition: all 0.2s;
   background-size: cover;
-  opacity: 0.15;
 }

@@ -9,7 +9,7 @@ export default function Post(post) {
   const {index, user, size, text, _id} = post;
   const {profile_picture} = user;
   const opacity = size - 1 === index ? 0 : 0.9; //0.5 + (size - index) / size * 0.5;
-  const rotate = index / (size - 1) * 360 - 90;
+  const rotate = index / (size - 1) * -360 - 90;
   const translate = 100;
   const style = {
     opacity,
