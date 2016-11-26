@@ -4,15 +4,16 @@ import App from './App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import createConnection from 'tweetping-connect';
+import getStreamId from './utils/getStreamId';
 
 import reducers from './reducers';
 import { wallLoaded, postReceived } from './actions';
 
 import './index.css';
 
+const {load, connect} = createConnection(getStreamId());
 const store = createStore(reducers);
 //store.dispatch(wallLoaded(require('./data.json')));
-const {load, connect} = createConnection('36bf7ed4');
 
 load('wall/', {
   query: {

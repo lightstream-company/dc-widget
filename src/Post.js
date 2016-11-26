@@ -1,7 +1,9 @@
 import React from 'react';
 import './Post.css';
 import createConnection from 'tweetping-connect';
-const {permalink} = createConnection('36bf7ed4');
+import getStreamId from './utils/getStreamId';
+
+const {permalink} = createConnection(getStreamId());
 
 export default function Post(post) {
   const {index, user, size, text, _id} = post;
