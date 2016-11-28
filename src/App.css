@@ -1,7 +1,72 @@
-.wall{
-  padding: 10px;
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  background: #357AB7;
+    color: white;
 }
 
-.wall .post{
-  border-bottom: 1px solid #ccc;
+.post {
+	padding: 15px;
+    background: #4099FF;border: 2px solid white;
+   
 }
+
+
+.wall {
+	max-width: 80%;
+	margin: 3em auto;
+	border: 1px solid #ccc;
+	padding: 0;
+    background: white;
+  
+	
+}
+
+.post:hover {
+	background: rgba(110, 202, 217, 0.25);
+	-webkit-transition: background 1s;
+	transition: background 1s;
+}
+
+.post h2 {
+	font-weight: 700;
+    font-size: 35px;
+	margin: 0;display: inline-block;vertical-align: top;padding-top:20px;
+   
+    
+  
+}
+
+.post p {
+	font-weight: 500;
+    font-size: 18px;
+
+  
+}
+
+.post em {
+	font-weight: 500;
+	font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;   
+}
+
+.post figure {
+   margin: 0;
+  padding: 0;
+  margin-right: 15px;
+    display: inline-block;
+   
+}
+
+.post img {width: 90px;;border-radius: 90%;vertical-align: center;border: 3px solid white}
+
+
+
+.gauche{ display: inline-block;width: 50%;}
+.droite {display: inline-block;width: 50%;}
+
