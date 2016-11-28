@@ -13,6 +13,8 @@ class App extends Component {
     return <div className="wall">
       {posts.map((post, i) => {
         return <div key={i} className="post">
+            
+        
         <div className="gauche">
           <figure><img src={post.user.profile_picture} alt="" /></figure>
           <h2>@{post.user.name}</h2>
