@@ -10,7 +10,7 @@ class App extends Component {
     const {posts} = this.props;
     const style = {};
     const lastPostWithImg = _.find(posts, (post) => {
-      return post.media[0] !== undefined;
+      return post && post.media && post.media[0] !== undefined;
     });
     if(lastPostWithImg){
       style.backgroundImage = `url(${lastPostWithImg.media[0].images.large.url})`;
