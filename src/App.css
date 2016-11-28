@@ -1,7 +1,71 @@
+
 .wall{
   padding: 10px;
 }
 
 .wall .post{
-  border-bottom: 1px solid #ccc;
+  border-top: 4px solid #424242;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+  background-color: #424242;
+}
+
+h1 {
+	padding:1em;
+	text-align: center;
+	font-family: Futura;
+}
+
+h2 {
+	font-family: 'Roboto';
+	color:#326C70;
+}
+
+em{
+	color:#326C70;
+
+}
+
+.post {
+	padding: 1em 1em;
+	font-family: 'Raleway'
+}
+
+.wall {
+	max-width: 800px;
+	height: 100%;
+	margin: 1em auto;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	padding: 0;
+	background: #e2e2e2;
+}
+
+.post:hover {
+	background-color: #ECFFFF;
+	-webkit-transition: background 1s;
+	transition: background 1s;
+}
+
+.post h2 {
+	font-weight: 700;
+	margin: 0;
+}
+
+
+.post p {
+	font-weight: 300;
+}
+
+.post em {
+	font-weight: 500;
+	font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: bold;   
 }
