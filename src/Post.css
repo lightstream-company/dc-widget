@@ -11,6 +11,7 @@
 
 
 .post{
+  color: #bbb;
   position: absolute;
   width: 0;
   transition: all 0.5s;
@@ -60,7 +61,7 @@
 }
 
 .post .content .line{
-  border-top: 1px dashed #c55;
+  border-top: 1px dashed #d44;
   width: 4000px;
   position: absolute;
   top: 0px;
