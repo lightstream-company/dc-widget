@@ -1,35 +1,37 @@
 .wall{
   padding: 10px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
 .wall .post{
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #182f33;
 }
 
 body {
 	font-family: 'Raleway';
-	background: #eee;
+	background-color: #182f33;
+	color: #fff;
 }
 
 .post {
 	padding: 1em;
 	clear: both;
 	overflow: hidden;
+	background-color: #24474d;
 }
 
 .wall {
 	max-width: 768px;
 	margin: 1em auto;
-	border: 1px solid #ccc;
 	border-bottom: none;
 	padding: 0;
-	background: #fff;
 }
 
 .post:hover {
-	background: rgba(110, 202, 217, 0.25);
-	-webkit-transition: background 1s;
-	transition: background 1s;
+	background-color: #305e66;
+	-webkit-transition: background-color 1s;
+	transition: background-color 1s;
 }
 
 .post h2 {
@@ -52,7 +54,7 @@ body {
     letter-spacing: 1px;
     font-size: 12px;
     float: right;
-    color: #666;
+    color: #64C8D7;
     top: 0;
 }
 
@@ -66,7 +68,7 @@ body {
 
 @media screen and (max-width: 768px) {
 	.wall {
-		border: none;
+		border-radius: 0;
 		margin: 0;
 	}
 	
