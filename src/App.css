@@ -66,6 +66,18 @@ body {
 	width: 48px;
 }
 
+.post .media {
+	margin: 1em 0 0 4em;
+	height: 300px;
+	overflow: hidden;
+	border-radius: 4px;
+}
+
+.post .media img {
+	width: 100%;
+	margin: -150px 0;
+}
+
 @media screen and (max-width: 768px) {
 	.wall {
 		border-radius: 0;
@@ -73,7 +85,11 @@ body {
 	}
 	
 	.post p {
-		margin: 1.5em 0 0 ;
+		margin: 1.5em 0 0;
+	}
+	
+	.post .media {
+		margin: 1em 0 0;
 	}
 	
 	.post h2,
@@ -87,16 +103,4 @@ body {
 		display: block;
 		margin-top: 0.5em;
 	}
-}
-
-.post .media{
-  max-width: 80%;
-  position: relative;
-  border: 7px solid white;
-  margin: 20px;
-  box-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
-
-.post .media img{
-  width: 100%;
 }

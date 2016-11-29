@@ -16,7 +16,6 @@ class App extends Component {
           </div>;
         }
 
-
         return <div key={i} className="post">
           <img src={post.user.profile_picture} alt="" className="profile-picture" />
           <h2>@{post.user.name}</h2>
