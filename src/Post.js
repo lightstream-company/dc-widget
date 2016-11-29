@@ -1,22 +1,36 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
+import VerticalText from './VerticalText';
 import './Post.css';
-import createConnection from 'tweetping-connect';
-import getStreamId from './utils/getStreamId';
-
-const {permalink} = createConnection(getStreamId());
 
 class Post extends Component {
   constructor(props){
     super(props);
     this.state = {
-      left: Math.round(Math.random() * 100)
+      left: Math.random() * 100,
+      fontSize: Math.random(),
+      timer: Math.round(Math.random() * 200) + 50,
+      textIndex: 0
     };
   }
+  componentDidMount() {
+    this.interval = setInterval(() => this.incrementIndex(), this.state.timer);
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+  incrementIndex() {
+    const newIndex = this.state.textIndex + 1;
+    const textLength = _.get(this.props, 'text.length', 0);
+    this.setState({
+      textIndex: newIndex > textLength ? 0 : newIndex
+    });
+  }
   render() {
-    const {index, user, size, text, _id} = this.props;
-    const {left} = this.state;
+    const {index, user, size, text} = this.props;
+    const {left, textIndex} = this.state;
     const {profile_picture} = user;
-    const opacity = index / size;
+    const opacity = (size - index) / size;
     const zIndex = (size + 1) - index;
     const style = {
       left: left + '%',
@@ -27,12 +41,10 @@ class Post extends Component {
     };
     return <div className="post" style={style}>
       <div style={txtStyle} className="content">
-        <a href={permalink(_id)} target="_blank">
-          <span className="pict" style={{
+        <VerticalText text={text.slice(0, textIndex)} />
+        <span className="pict" style={{
         backgroundImage: `url(${profile_picture})`
       }} />
-        </a>
-        <p>{text}</p>
       </div>
     </div>;
   }

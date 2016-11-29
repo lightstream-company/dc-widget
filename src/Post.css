@@ -1,52 +1,39 @@
 
 .post{
-  color: #bbb;
+  color: #0f0;
   position: absolute;
   height: 100%;
   width: 40px;
   margin-left: -20px;
-  border: 1px solid red;
+}
+
+@keyframes letterApper{
+  0%{
+    background-color: rgba(0,255,0,1)
+  }
+  100%{
+    background-color: rgba(0,255,0,0)
+  }
+}
+
+.post .letter{
+  width: 10px;
+  margin: 0 auto;
+  text-align: center;
+  animation: letterApper 0.15s;
 }
 
 .post .pict{
- position: absolute;  
- top: -17px;
- left: -36px;
- width: 34px; 
- height: 34px; 
- border-radius: 50px;
- transition: all 0.2s;
- background-size: cover;
- opacity: 0.8;
- z-index: 2;
+  display: block;
+  width: 40px; 
+  height: 40px; 
+  margin-left: -3px;
+  border: 3px solid #0f0;
+  border-radius: 50px;
+  background-size: cover;
 }
 
 .post .pict:hover{
   opacity: 1;
-  transform: scale(2);
-}
-
-.post .content{
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  height: 40px; 
-  top: 20px;
-  margin-top: -20px;
-}
-
-.post .content h2{
-  font-size: 16px;
-  margin: -17px 0 0 0;
-  padding: 0;
-}
-.post .content p{
-  margin: 0;
-  padding: 0;
-  width: 400px;
-  font-size: 14px;
-  line-height: 12px;
-  height: 36px;
-  overflow: hidden;
 }
 
