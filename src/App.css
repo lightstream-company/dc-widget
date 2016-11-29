@@ -58,7 +58,7 @@ body {
     top: 0;
 }
 
-.post img {
+.post .profile-picture {
 	float: left;
 	clear: none;
 	border-radius: 4px;
@@ -87,4 +87,16 @@ body {
 		display: block;
 		margin-top: 0.5em;
 	}
+}
+
+.post .media{
+  max-width: 80%;
+  position: relative;
+  border: 7px solid white;
+  margin: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.post .media img{
+  width: 100%;
 }
