@@ -11,6 +11,9 @@ class App extends Component {
   render() {
     const {posts} = this.props;
     return <div className="wall">
+
+      <h1>My title</h1>
+
       {posts.map((post, i) => {
         return <div key={i} className="post">
             
@@ -26,10 +29,10 @@ class App extends Component {
         </div>
           
     </div>;
-          
-          
-          
-          
+
+
+
+
       })}
     </div>;
   }
