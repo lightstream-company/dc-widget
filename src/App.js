@@ -10,10 +10,15 @@ import './App.css';
 class App extends Component {
   render() {
     const {posts} = this.props;
+    var firstPost = posts[0];
+  
+    var title;
+    if(firstPost){
+      title = <h1>{firstPost.text}</h1>;
+    }
+
     return <div className="wall">
-
-      <h1>My title</h1>
-
+      {title}
       {posts.map((post, i) => {
         return <div key={i} className="post">
             
