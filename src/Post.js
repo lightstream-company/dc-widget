@@ -36,12 +36,13 @@ class Post extends Component {
       left: left + '%',
       zIndex,
       opacity
+      //transform: `translateZ(${opacity * 1000}px)`
     };
     const txtStyle = {
     };
     return <div className="post" style={style}>
       <div style={txtStyle} className="content">
-        <VerticalText text={text.slice(0, textIndex)} />
+        <VerticalText text={(text || '').slice(0, textIndex)} />
         <span className="pict" style={{
         backgroundImage: `url(${profile_picture})`
       }} />
