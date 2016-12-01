@@ -9,7 +9,7 @@ class Post extends Component {
     this.state = {
       left: Math.random() * 100,
       fontSize: Math.random(),
-      timer: Math.round(Math.random() * 200) + 50,
+      timer: Math.round(Math.random() * 200) + 300,
       textIndex: 0
     };
   }
@@ -35,7 +35,8 @@ class Post extends Component {
     const style = {
       left: left + '%',
       zIndex,
-      opacity
+      opacity,
+      fontSize: Math.round(opacity * 2 * 7) + 5
       //transform: `translateZ(${opacity * 1000}px)`
     };
     const txtStyle = {
