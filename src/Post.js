@@ -8,7 +8,6 @@ class Post extends Component {
     super(props);
     this.state = {
       left: Math.random() * 100,
-      fontSize: Math.random(),
       timer: Math.round(Math.random() * 200) + 300,
       textIndex: 0
     };
@@ -35,15 +34,15 @@ class Post extends Component {
     const style = {
       left: left + '%',
       zIndex,
-      opacity,
-      fontSize: Math.round(opacity * 2 * 7) + 5
+      opacity
       //transform: `translateZ(${opacity * 1000}px)`
     };
     const txtStyle = {
+      fontSize: ((Math.round(opacity * 3 * 7) + 5) / 10) + 'em'
     };
     return <div className="post" style={style}>
-      <div style={txtStyle} className="content">
-        <VerticalText text={(text || '').slice(0, textIndex)} />
+      <div className="content">
+        <VerticalText style={txtStyle} text={(text || '').slice(0, textIndex)} />
         <div className="border">
           <span className="pict" style={{
           backgroundImage: `url(${profile_picture})`
