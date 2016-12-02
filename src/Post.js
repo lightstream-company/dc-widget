@@ -44,9 +44,11 @@ class Post extends Component {
     return <div className="post" style={style}>
       <div style={txtStyle} className="content">
         <VerticalText text={(text || '').slice(0, textIndex)} />
-        <span className="pict" style={{
-        backgroundImage: `url(${profile_picture})`
-      }} />
+        <div className="border">
+          <span className="pict" style={{
+          backgroundImage: `url(${profile_picture})`
+        }} />
+        </div>
       </div>
     </div>;
   }
