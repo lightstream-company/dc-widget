@@ -1,6 +1,6 @@
 FROM node:6
 
-WORKDIR /wheel-ui
+WORKDIR /matrix-ui
 COPY package.json package.json
 RUN npm install 
 
@@ -11,8 +11,8 @@ RUN npm run build
 
 RUN mkdir /ls-ui/
 RUN mkdir /ls-ui/ui/
-RUN mv build /ls-ui/ui/wheel
+RUN mv build /ls-ui/ui/matrix
 
-VOLUME /ls-ui/ui/wheel
+VOLUME /ls-ui/ui/matrix
 
-CMD ["echo", "'wheel-ui file volume mounted over /ls-ui/'"]
+CMD ["echo", "'matrix-ui file volume mounted over /ls-ui/'"]
