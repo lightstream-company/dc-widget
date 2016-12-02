@@ -10,7 +10,6 @@ class App extends Component {
     const style = {
       fontSize: 10 * viewport.width / 1200
     };
-    console.log(style);
     return <div className="wrapper">
       <div className="wall" style={style}>
         {posts.map((post, i) => <Post key={post._id} index={i} size={posts.length} {...post} />)}
