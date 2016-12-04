@@ -40,13 +40,23 @@ class Post extends Component {
     const txtStyle = {
       fontSize: ((Math.round(opacity * 3 * 7) + 5) / 10) + 'em'
     };
+    const pictWidthNumber = opacity * 2 + 2;
+    const pictWidth = pictWidthNumber + 'em';
+    const pictStyle = {
+      width: pictWidth,
+      height: pictWidth,
+      backgroundImage: `url(${profile_picture})`
+    };
+    const borderStyle = {
+      width: pictWidth,
+      left: (4 - pictWidthNumber) / 2 + 'em',
+      height: pictWidth
+    };
     return <div className="post" style={style}>
       <div className="content">
         <VerticalText style={txtStyle} text={(text || '').slice(0, textIndex)} />
-        <div className="border">
-          <span className="pict" style={{
-          backgroundImage: `url(${profile_picture})`
-        }} />
+        <div className="border" style={borderStyle}>
+          <span className="pict" style={pictStyle} />
         </div>
       </div>
     </div>;
