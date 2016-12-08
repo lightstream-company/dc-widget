@@ -16,7 +16,7 @@ const store = createStore(reducers);
 
 load('wall/', {
   query: {
-    size: 10
+    size:150
   }
 }).then(posts => store.dispatch(wallLoaded(posts)));
 
