@@ -68,14 +68,14 @@ body {
 
 .post .media {
 	margin: 1em 0 0 4em;
-	height: 300px;
+	max-height: 300px;
 	overflow: hidden;
 	border-radius: 4px;
 }
 
 .post .media img {
 	width: 100%;
-	margin: -150px 0;
+	border-radius: 4px;
 }
 
 @media screen and (max-width: 768px) {
